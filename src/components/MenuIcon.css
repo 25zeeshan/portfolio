@@ -1,0 +1,133 @@
+.menu-toggle {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  background-color: #85f5da;
+  transition: transform 0.3s ease;
+}
+
+.bar.line1 {
+  width: 60%;
+}
+
+.bar.line2 {
+  width: 80%;
+}
+
+.bar.line3 {
+  width: 100%;
+}
+
+.menu-toggle.active .bar {
+  width: 100%;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+.sidebar {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar ul {
+  border-top: 1px solid #8792b0;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  list-style-type: none;
+  padding: 20px 30px;
+  border-bottom: 1px solid #8792b0;
+}
+
+.sidebar ul li a {
+  color: #85f5da;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar .resume-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sidebar .resume-section .resume-button {
+  font-size: 16px;
+  padding: 15px 35px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: #0a192f;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 2s cubic-bezier(0.645,0.045,0.355,1);
+  box-shadow: -5px 0px 10px #85f5da;
+}
+
+.modal.open {
+  display: block;
+  width: 80%;
+}
+
+.modal .logo{
+    margin: 30px auto;
+}
+
+.modal nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  background: #fff;
+  z-index: 1010;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
+
+.modal.open nav {
+  transform: translateX(0);
+}
+
+.modal nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal nav ul li {
+  margin: 20px 0;
+}
+
+.modal nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
