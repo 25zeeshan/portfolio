@@ -1,12 +1,18 @@
 import { useState } from "react";
 import "./MenuIcon.css";
 
-const MenuIcon = () => {
+// eslint-disable-next-line react/prop-types
+const MenuIcon = ({ scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  function handleClickToSection(section) {
+    setIsOpen(!isOpen);
+    scrollToSection(section);
+  }
 
   return (
     <div>
@@ -21,17 +27,31 @@ const MenuIcon = () => {
 
       <div className={`modal ${isOpen ? "open" : ""}`}>
         <div className="logo">
-            <div className="hexagon"></div>
-            <div className="inner-hexagon"></div>
-            <div className="text">Z</div>
+          <div className="hexagon"></div>
+          <div className="inner-hexagon"></div>
+          <div className="text">Z</div>
         </div>
         <div className={`sidebar`}>
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a
+                href="#"
+                onClick={() => {
+                  handleClickToSection("about");
+                }}
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+              <a
+                href="#"
+                onClick={() => {
+                  handleClickToSection("experience");
+                }}
+              >
+                Experience
+              </a>
             </li>
             <li>
               <a href="#projects">Projects</a>

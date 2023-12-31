@@ -1,0 +1,23 @@
+.about{
+    text-align: justify;
+}
+
+.about .content{
+    width: 50%;
+    color: #8792b0;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.about .skills{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+}
+
+.skills img{
+    width: 50px;
+    margin: 10px;
+}

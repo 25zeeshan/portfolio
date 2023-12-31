@@ -1,0 +1,33 @@
+.vertical-timeline-element-subtitle .date{
+    float: right;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.company-name{
+    color: #85f5da;
+}
+
+.work-details{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.work-details li::before{
+  content: "\25B6"; 
+  color: #85f5da;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 0.5em;
+}
+
+.work-details li{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.tech-stack{
+    font-weight: bold;
+    color: #85f5da;
+    font-size: 15px;
+}

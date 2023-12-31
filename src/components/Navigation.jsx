@@ -20,6 +20,11 @@ const Navigation = () => {
     };
   }, [prevScrollPos]);
 
+  const scrollToSection = (section) => {
+    const aboutSection = document.getElementById(section);
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className={`navigation ${visible ? "visible" : "hidden"}`}>
       <div className="logo">
@@ -29,8 +34,8 @@ const Navigation = () => {
       </div>
 
       <div className="nav-links">
-        <a href="#about">About</a>
-        <a href="#about">Experience</a>
+        <a href="#" onClick={() => {scrollToSection('about')}}>About</a>
+        <a href="#" onClick={() => scrollToSection('experience')}>Experience</a>
         <a href="#about">Projects</a>
         <a href="#about">Contact</a>
         <div>
@@ -39,7 +44,7 @@ const Navigation = () => {
       </div>
 
       <div className="mobile-menu">
-        <MenuIcon />
+        <MenuIcon scrollToSection={scrollToSection} />
       </div>  
     </div>
   );
