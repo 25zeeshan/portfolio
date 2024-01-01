@@ -7,6 +7,7 @@
     color: #8792b0;
     font-size: 17px;
     line-height: 24px;
+    margin-bottom: 7vh;
 }
 
 .about .skills{
@@ -14,10 +15,21 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10vh;
 }
 
 .skills img{
     width: 50px;
     margin: 10px;
 }
+
+.about > div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .about > div.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

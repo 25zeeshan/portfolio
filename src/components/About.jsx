@@ -12,20 +12,32 @@ import sqlimg from "../assets/sql-server.png";
 import tailwindImg from "../assets/tailwind.png";
 import csharpImg from "../assets/cSharp.png";
 import dotnetImg from "../assets/dotnet.png";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    const homeElements = document.querySelectorAll(".about > div");
+
+    homeElements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, index * 300);
+    });
+  }, []);
+
   return (
     <div id="about" className="about new-section">
       <div className="heading">
         About Me<div className="headingLine"></div>{" "}
       </div>
-      <p className="content">
+      <div className="content">
         Hi there! I&apos;m Zeeshan, a web enthusiast who discovered the magic of
         creating online stuff back in 2020. I started with building websites
         using{" "}
         <span style={{ color: "#85f5da" }}>HTML, CSS, React, and Node.js</span>{" "}
         during an internship, and I&apos;ve been hooked ever since.
-        <br/><br/>
+      </div>
+      <div className="content">
         Fast-forward to today, I&apos;ve had the chance to work in different
         places—from <span style={{ color: "#85f5da" }}>small startups</span> to{" "}
         <span style={{ color: "#85f5da" }}>big companies</span> - and even
@@ -34,13 +46,11 @@ const About = () => {
         way. But what really gets me excited? Full-stack development. I&apos;m
         all about crafting entire web applications, from the start to the finish
         line.
-        <br/><br/>
+      </div>
+      <div className="content">
         Join me in this adventure of turning lines of code into awesome web
         experiences!
-      </p>
-      <p className="content">
-        
-      </p>
+      </div>
 
       <div className="skills">
         <img src={htmlImg} alt="React logo" />

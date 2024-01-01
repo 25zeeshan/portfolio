@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Loader from "./components/Loader";
-import Navigation from "./components/Navigation";
-import Home from "./components/Home";
 import Flashlight from "./components/FlashLight";
-import About from "./components/About";
-import Experience from "./components/Experience";
+import Main from "./components/Main";
 
 function App() {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -34,18 +31,34 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+
+    const sections = document.querySelectorAll('.new-section');
+    if(sections.length === 0){
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+        entry.target.classList.toggle('show', entry.isIntersecting);
+        if(entry.isIntersecting) observer.unobserve(entry.target);
+      })
+    },{
+      threshold: 0.3
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    })
+
+  }, [initialLoading])
+
   return (
     <div style={{ backgroundColor: "#0A192F", position: "relative" }}>
       <Flashlight lightPosition={lightPosition} />
       {initialLoading && <Loader />}
-      {!initialLoading && (
-        <div>
-          <Navigation />
-          <Home />
-          <About />
-          <Experience />
-        </div>
-      )}
+      {!initialLoading && <Main />}
     </div>
   );
 }

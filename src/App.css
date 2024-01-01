@@ -28,3 +28,19 @@ body{
     background-color: #8792b0;
     margin-left: 10px;
 }
+
+.new-section{
+    opacity: 0;
+    transform: translateX(50vw);
+    overflow: hidden;
+    transition: 200ms;
+}
+
+.new-section.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-content{
+    overflow-x: hidden;
+}
