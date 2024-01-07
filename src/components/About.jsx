@@ -14,19 +14,29 @@ import csharpImg from "../assets/cSharp.png";
 import dotnetImg from "../assets/dotnet.png";
 import { useEffect } from "react";
 
-const About = () => {
-  useEffect(() => {
-    const homeElements = document.querySelectorAll(".about > div");
+import { useInView } from 'react-intersection-observer';
 
-    homeElements.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add("visible");
-      }, index * 300);
-    });
-  }, []);
+const About = () => {
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".about > div");
+  
+    if (inView) {
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("visible");
+        }, index * 300);
+      });
+    }
+  }, [inView]);
+  
 
   return (
-    <div id="about" className="about new-section">
+    <div id="about" className="about new-section" ref={ref}>
       <div className="heading">
         About Me<div className="headingLine"></div>{" "}
       </div>

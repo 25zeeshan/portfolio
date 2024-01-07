@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./Home.css";
+import { scrollToSection } from "../utils";
 
 const Home = () => {
 
@@ -25,7 +26,7 @@ const Home = () => {
           into impactful realities.
         </div>
         <div style={{marginTop: "50px"}}>
-          <a href="#projects" className="work-button">
+          <a href="#" onClick={() => scrollToSection('projects')} className="work-button">
             {" "}
             Check out my work !{" "}
           </a>

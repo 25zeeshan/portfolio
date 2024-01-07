@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Navigation.css";
 import MenuIcon from "./MenuIcon";
+import { scrollToSection } from "../utils";
 
 const Navigation = () => {
 
@@ -20,10 +21,7 @@ const Navigation = () => {
     };
   }, [prevScrollPos]);
 
-  const scrollToSection = (section) => {
-    const aboutSection = document.getElementById(section);
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
-  };
+  
 
   return (
     <div className={`navigation ${visible ? "visible" : "hidden"}`}>
@@ -34,10 +32,10 @@ const Navigation = () => {
       </div>
 
       <div className="nav-links">
-        <a href="#" onClick={() => {scrollToSection('about')}}>About</a>
+        <a href="#" onClick={() => scrollToSection('about')}>About</a>
         <a href="#" onClick={() => scrollToSection('experience')}>Experience</a>
-        <a href="#about">Projects</a>
-        <a href="#about">Contact</a>
+        <a href="#" onClick={() => scrollToSection('projects')}>Projects</a>
+        <a href="#" onClick={() => scrollToSection('contact')}>Contact</a>
         <div>
             <button className="resume-button">Resume</button>
         </div>

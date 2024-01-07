@@ -1,0 +1,44 @@
+.projects{
+    height: auto;
+}
+
+.project-detail .image-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-detail .image-container img {
+  width: 50vw;
+}
+
+.project-detail .overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px
+}
+
+
+.project-detail .overlay a{
+    text-decoration: none;
+    color: #85f5da;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.image-container:hover .image {
+  opacity: 0.5;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}

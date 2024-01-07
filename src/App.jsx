@@ -31,29 +31,6 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-
-    const sections = document.querySelectorAll('.new-section');
-    if(sections.length === 0){
-      return;
-    }
-
-    const observer = new IntersectionObserver(entries => {
-
-      entries.forEach(entry => {
-        entry.target.classList.toggle('show', entry.isIntersecting);
-        if(entry.isIntersecting) observer.unobserve(entry.target);
-      })
-    },{
-      threshold: 0.3
-    });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    })
-
-  }, [initialLoading])
-
   return (
     <div style={{ backgroundColor: "#0A192F", position: "relative" }}>
       <Flashlight lightPosition={lightPosition} />

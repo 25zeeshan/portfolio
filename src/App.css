@@ -29,18 +29,25 @@ body{
     margin-left: 10px;
 }
 
-.new-section{
-    opacity: 0;
-    transform: translateX(50vw);
-    overflow: hidden;
-    transition: 200ms;
-}
 
-.new-section.show{
-    transform: translateX(0);
-    opacity: 1;
-}
 
 .main-content{
     overflow-x: hidden;
 }
+
+
+.home > div.visible {
+    animation: slideInFromRight 0.5s ease forwards;
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
