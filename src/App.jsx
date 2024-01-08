@@ -36,6 +36,7 @@ function App() {
       <Flashlight lightPosition={lightPosition} />
       {initialLoading && <Loader />}
       {!initialLoading && <Main />}
+      
     </div>
   );
 }

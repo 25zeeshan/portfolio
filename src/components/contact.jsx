@@ -93,6 +93,8 @@ const Contact = () => {
           </a>
         </div>
       </div>
+
+      <a href="https://github.com/25zeeshan/portfolio" target="_" className="footer">Designed and built by Zeeshan @2024</a>
     </div>
   );
 };
