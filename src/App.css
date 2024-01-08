@@ -5,7 +5,7 @@ body{
 }
 
 .new-section{
-    height: 100vh;
+  min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,3 +51,15 @@ body{
     }
   }
   
+
+  @media screen and (max-width: 786px) {
+    .heading{
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .heading{
+      font-size: 20px;
+    }
+  }

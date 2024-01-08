@@ -7,7 +7,7 @@
   color: #8792b0;
   font-size: 17px;
   line-height: 24px;
-  margin-bottom: 7vh;
+  margin-bottom: 5vh;
 }
 
 .about .skills {
@@ -40,5 +40,31 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about .content,
+  .about .skills {
+    width: 70%;
+    font-size: 15px;
+  line-height: 20px;
+  }
+
+  .skills img {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about .content,
+  .about .skills {
+    width: 90%;
+    font-size: 13px;
+  line-height: 17px;
+  }
+
+  .skills img {
+    width: 25px;
   }
 }

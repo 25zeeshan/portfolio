@@ -59,3 +59,24 @@ textarea {
 .socials a img {
   width: 50px;
 }
+
+@media screen and (max-width: 1024px) {
+  .contact-container form > input,
+  textarea {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .contact-container form > input,
+  textarea {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-container form > input,
+  textarea {
+    width: 70vw;
+  }
+}

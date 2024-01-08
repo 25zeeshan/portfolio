@@ -8,7 +8,7 @@
 .Home {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 60vw;
 }
 
 .Home div {
@@ -22,7 +22,7 @@
 
 .name {
   color: #fff;
-  font-size: 80px;
+  font-size: 75px;
   font-weight: bold;
 }
 
@@ -54,32 +54,6 @@
   color: #0a192f;
 }
 
-
-@media screen and (max-width : 500px)  {
-  .Home{
-    width: 85vw;
-  }
-
-  .line1 {
-    font-size: 15px;
-  }
-  
-  .name {
-    font-size: 35px;
-  }
-  
-  .line3 {
-    font-size: 20px;
-  }
-  
-  .details {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  
-}
-
-
 /*Animation */
 .Home > div {
   opacity: 0;
@@ -90,4 +64,64 @@
 .Home > div.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
+  .Home {
+    width: 60vw;
+  }
+
+
+
+  .name {
+    font-size: 65px;
+  }
+
+  .line3 {
+    font-size: 45px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .Home {
+    width: 70vw;
+  }
+
+  .line1 {
+    font-size: 15px;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+
+  .line3 {
+    font-size: 35px;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .Home {
+    width: 90vw;
+  }
+
+  .line1 {
+    font-size: 15px;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+
+  .line3 {
+    font-size: 30px;
+  }
+
+  .details {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }

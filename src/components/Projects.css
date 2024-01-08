@@ -1,5 +1,9 @@
-.projects{
-    height: auto;
+.carousel-root {
+  width: 50vw;
+}
+
+.projects {
+  height: auto;
 }
 
 .project-detail .image-container {
@@ -8,9 +12,7 @@
   margin-bottom: 20px;
 }
 
-.project-detail .image-container img {
-  width: 50vw;
-}
+
 
 .project-detail .overlay {
   position: absolute;
@@ -23,16 +25,15 @@
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 20px
+  padding: 20px;
 }
 
-
-.project-detail .overlay a{
-    text-decoration: none;
-    color: #85f5da;
-    font-size: 22px;
-    font-weight: bold;
-    margin-right: 10px;
+.project-detail .overlay a {
+  text-decoration: none;
+  color: #85f5da;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .image-container:hover .image {
@@ -42,3 +43,54 @@
 .image-container:hover .overlay {
   opacity: 1;
 }
+
+.project-links{
+  width: 30px !important;
+}
+
+.project-links.second{
+  width: 25px !important;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .carousel-root {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .carousel-root {
+    width: 70vw;
+  }
+
+  .project-description{
+    font-size: 12px;
+  }
+
+  .project-tech{
+    font-size: 12px;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .carousel-root {
+    width: 85vw;
+  }
+
+  .project-detail .overlay a{
+    font-size: 15px;
+  }
+
+  .project-detail .overlay {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+
