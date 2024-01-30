@@ -37,7 +37,7 @@ const Navigation = () => {
         <a href="#" onClick={() => scrollToSection('projects')}>Projects</a>
         <a href="#" onClick={() => scrollToSection('contact')}>Contact</a>
         <div>
-            <button className="resume-button">Resume</button>
+        <a className="resume-button" href='https://drive.google.com/file/d/1Uo1uB50hul7R_5-MVneb3lQ96PWBjBjD/view?usp=drive_link' target='_' >Resume</a>
         </div>
       </div>
 

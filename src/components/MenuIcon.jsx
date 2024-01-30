@@ -71,7 +71,7 @@ const MenuIcon = ({ scrollToSection }) => {
           </ul>
 
           <div className="resume-section">
-            <button className="resume-button">Resume</button>
+            <a className="resume-button" href='https://drive.google.com/file/d/1Uo1uB50hul7R_5-MVneb3lQ96PWBjBjD/view?usp=drive_link' target='_' >Resume</a>
           </div>
         </div>
       </div>

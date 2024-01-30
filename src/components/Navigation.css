@@ -41,7 +41,7 @@
 
 .resume-button:hover {
   background-color: #85f5da;
-  color: #0a192f;
+  color: #0a192f !important;
 }
 
 .logo {
