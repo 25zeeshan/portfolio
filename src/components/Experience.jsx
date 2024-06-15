@@ -23,7 +23,7 @@ const Experience = () => {
               Software Engineer, <span className="company-name">@Odessa</span>
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Bangalore, India <span className="date">July 2021 - Present</span>
+              Bangalore, India <span className="date">July 2021 - April 2024</span>
             </h4>
             <ul className="work-details">
               <li>
@@ -60,7 +60,7 @@ const Experience = () => {
               <li>Collaborated with internal teams to ensure successful integration of web applications</li>
             </ul>
             <div className="tech-stack">
-                React, Javascript, MongoDB, ExpressJS, AWS S3
+                React, Javascript, MongoDB, ExpressJS, AWS
             </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
